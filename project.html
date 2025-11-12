@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Project | Ngocat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="project-page">
+  <video autoplay muted loop id="bg-video">
+    <source src="assets/about.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay">
+    <header id="header">
+      <div class="nav-container">
+        <div class="logo"><a href="index.html">Ngocat</a></div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav id="nav-menu">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="project.html">PROJECT</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container">
+      <main class="content">
+        <h1>Project</h1>
+        <p>Projects Developed at HCMUTE by Ngocat. </p><p>Student projects focused on system programming, IoT, AI, and microelectronics, developed during studies at HCMUTE.</p>
+
+        <section id="cate1">
+          <h2>FPGA</h2>
+          <ul>
+	    <li>09/2025 - Now – <a href="#">RISC-V 32I Instruction Set Implementation on FPGA</a></li>
+	    <p>   Design and test basic RISC-V 32I instructions (arithmetic, logic, load/store, branch) 
+using Verilog on Spartan-3E. The processor core is synthesized and verified through simulation and FPGA 
+deployment.</p>
+            <li>02/2024 - 05/2024  – <a href="#">Traffic Light Controller in Verilog</a></li>
+	    <p>   Developed and tested a traffic light circuit using integrated circuit design principles.
+Designed and implemented a finite state machine (FSM) to control the traffic light
+system. Collaborated with team members to optimize circuit performance and document
+project findings in a technical report.</p>
+          </ul>
+        </section>
+
+        <section id="cate2">
+          <h2>IOT</h2>
+          <ul>
+            <li>03/2025 - 06/2025 – <a href="#">Automatic Awning System</a></li>
+	    <p>   An IoT-based automatic awning system built with ESP32 and Firebase. 
+The system allows users to remotely control and monitor the awning via 
+a web interface. It supports real-time status updates, remote open/close 
+commands, and weather-based automation using sensors. Firebase is used for 
+data storage, user authentication, and cloud synchronization.</p>
+            <li>10/2022 - 1/2023 – <a href="#">Line-Following and Obstacle-Avoiding Robot</a></li>
+	    <p>   An Arduino-based robot designed to follow a line and avoid obstacles using
+ infrared sensors and a sound sensor. The IR sensors detect the path, while 
+the sound sensor enables basic interaction or control. The system combines real-time sensor 
+input with motor control to navigate autonomously. </p>
+          </ul>
+        </section>
+
+        <section id="cate3">
+          <h2>Sram</h2>
+          <ul>
+            <li>09/2024 - 12/2024 – <a href="#">6T SRAM  Array (4×4 Configuration) Design and Simulation</a></li>
+            <p>   Design and implement SRAM memory cells for stable and efficient data
+retention. Integrated essential circuit components, including pre-charging circuits, write
+cells, sensor amplifiers and decoder 2 to 4. Simulated and optimized the 4×4 SRAM array, evaluating power consumption
+and propagation delay </p>
+          </ul>
+        </section>
+
+        <section id="cate4">
+          <h2>AI</h2>
+          <ul>
+            <li>01/2025 - 04/2025 – <a href="#">Fiftyone and manger data</a></li>
+            <p>Used FiftyOne to manage and visualize a medical image dataset for 
+classifying healthy vs. diseased cells. The project involved labeling, filtering, 
+and evaluating model predictions to support cell-level diagnosis.</p>
+          </ul>
+        </section>
+      </main>
+      <aside class="sidebar">
+        <h2>Categories</h2>
+        <ul>
+          <li><a href="#cate1">FPGA</a></li>
+          <li><a href="#cate2">IOT</a></li>
+          <li><a href="#cate3">SRAM</a></li>
+          <li><a href="#cate4">AI</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Ngocat</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('active');
+    }
+
+    let lastScrollTop = 0;
+    const header = document.getElementById("header");
+    window.addEventListener("scroll", function () {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if (scrollTop > lastScrollTop && scrollTop > 100) {
+        header.style.transform = "translateY(-100%)";
+      } else {
+        header.style.transform = "translateY(0)";
+      }
+      lastScrollTop = scrollTop;
+    });
+  </script>
+</body>
+</html>
