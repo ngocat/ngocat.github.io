@@ -112,7 +112,7 @@ nav a:hover {
 }
 
 /* === FOOTER CHUNG === */
-#f {
+footer {
   position: fixed;
   bottom: 0;
   left: 0;
